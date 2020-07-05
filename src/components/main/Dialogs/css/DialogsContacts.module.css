@@ -1,0 +1,13 @@
+.link{
+    color: #656565;
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.linkActive {
+    text-decoration: underline;
+    background-color: #eee;
+}

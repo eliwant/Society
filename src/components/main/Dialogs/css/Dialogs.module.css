@@ -1,0 +1,19 @@
+.dialogContent {
+    width: 100%;
+    display: flex;
+    padding-top: 50px;
+}
+
+.dialogContent h2 {
+    top: 50px;
+    position: absolute;
+}
+
+.contacts{
+    min-width: 400px;
+    background-color: #61dafb;
+}
+
+.messages {
+    width: 100%;
+}

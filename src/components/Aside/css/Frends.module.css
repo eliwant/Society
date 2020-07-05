@@ -1,0 +1,17 @@
+.topFriends{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.topFriends h2{
+    color: #ffffff;
+}
+
+.friendsBox{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
