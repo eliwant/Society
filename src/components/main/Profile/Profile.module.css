@@ -1,32 +1,32 @@
-.profile{
+.profile {
     width: 100%;
 }
 
-.imageBox{
+.imageBox {
     display: flex;
     align-items: center;
     width: 100%;
-    height: 450px;
+    height: 250px;
     overflow: hidden;
     margin-bottom: 20px;
 }
 
-.imageBox img{
+.imageBox img {
     width: 100%;
     height: auto;
 }
 
-.personBox{
+.personBox {
     width: 100%;
     display: flex;
     align-items: flex-start;
 }
 
-.newPost{
+.newPost {
     width: 100%;
 }
 
-.newPostTextarea{
+.newPostTextarea {
     width: 100%;
     height: 100px;
     padding: 20px;
@@ -34,7 +34,7 @@
     resize: none;
 }
 
-.newPostSend{
+.newPostSend {
     display: flex;
     justify-content: flex-end;
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./css/MessageItem.module.css"
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const MessagesItem = (props) => {
 
@@ -10,7 +10,7 @@ const MessagesItem = (props) => {
         <div className={style.userBox}>
             <div className={style.userInfo}>
                 <div className={style.userAvatarBox}>
-                    <img src={props.userImage} alt=""/>
+                    <img src={props.userImage} alt="" />
                     <div className={style.userName}>
                         {props.userName}
                     </div>

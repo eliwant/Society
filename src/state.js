@@ -1,4 +1,4 @@
-import {renderTree} from "./render"
+import { renderTree } from "./render"
 
 let state = {
     friends: [
@@ -35,22 +35,26 @@ let state = {
     ],
 
     profilePage: {
-        posts:
-            [
-                {
-                    id: 1,
-                    src: "https://im0-tub-ru.yandex.net/i?id=752c84f08c638acfb2b02e2e8b908a89&n=13&exp=1",
-                    text: "I become the best programmer!",
-                    likes: 34
-                },
-                {
-                    id: 2,
-                    src: "https://im0-tub-ru.yandex.net/i?id=752c84f08c638acfb2b02e2e8b908a89&n=13&exp=1",
-                    text: "I love Natalie",
-                    likes: 42
-                }
-            ]
+        posts: [
+            {
+                id: 1,
+                src: "https://im0-tub-ru.yandex.net/i?id=752c84f08c638acfb2b02e2e8b908a89&n=13&exp=1",
+                text: "I become the best programmer!",
+                likes: 34
+            },
+            {
+                id: 2,
+                src: "https://im0-tub-ru.yandex.net/i?id=752c84f08c638acfb2b02e2e8b908a89&n=13&exp=1",
+                text: "I love Natalie",
+                likes: 42
+            }
+        ],
+
+        newPostText: "123test"
+
+        ,
     },
+
     dialogsPage: {
         dialogsData:
             [
@@ -80,21 +84,35 @@ let state = {
         messageData:
             [
                 {
-                    id: 1,
+                    id: 555555,
+                    name: "Natali",
+                    src: "https://sun9-48.userapi.com/c857520/v857520417/fd0a0/n9xTuUgYDW0.jpg",
                     message: "Hi, how are you?"
                 }
             ]
     }
 }
 
-export let addPost = (postMessage) => {
+export let addPost = () => {
     let newPost = {
         id: 3,
         src: "https://im0-tub-ru.yandex.net/i?id=752c84f08c638acfb2b02e2e8b908a89&n=13&exp=1",
-        text: postMessage,
+        text: state.profilePage.newPostText,
         likes: 0
     }
     state.profilePage.posts.push(newPost)
+    state.profilePage.newPostText = ''
     renderTree(state)
 }
+
+export let updateNewPostText = (newText) => {
+    state.profilePage.newPostText = newText
+    renderTree(state)
+}
+
+export let updateNewMessageText = (newText) => {
+    state.dialogsPage.messageData = newText
+    renderTree(state)
+}
+
 export default state

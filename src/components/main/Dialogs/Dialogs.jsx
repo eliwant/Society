@@ -2,10 +2,9 @@ import React from "react";
 import style from "./css/Dialogs.module.css"
 import DialogsContacts from "./DialogsContacts";
 import MessagesItem from "./MessagesItem";
-import {Route} from "react-router-dom";
+import { Route } from "react-router-dom";
 
 const Dialogs = (props) => {
-
 
     let DialogsElement = props.state.dialogsData.map(dialog =>
         <DialogsContacts
@@ -16,11 +15,24 @@ const Dialogs = (props) => {
 
     let MessagesElement = props.state.messageData.map(message =>
         <MessagesItem
-            userImage={DialogsElement.ava}
-            userName={DialogsElement.name}
+            userImage={message.src}
+            userName={message.name}
             userMessage={message.message}
+        /* createRef={newMessageElement} */
         />
     )
+
+    let newMessageElement = React.createRef();
+
+    let addPost = () => {
+        props.addPost()
+        props.updateNewPostText('')
+    }
+
+    /* let onPostChange = () => {
+        let text = newPostElement.current.value
+        props.updateNewPostText(text)
+    } */
 
     return (
         <div className={style.dialogContent}>
